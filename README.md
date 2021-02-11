@@ -5,11 +5,11 @@
 [![Build Status - Travis][travis-badge]][travis-ci]
 [![Build Status - GitHub Actions][gha-badge]][gha-ci]
 
-# node-typescript-boilerplate
+# Webpack-module-crack
 
-👩🏻‍💻 Developer Ready: A comprehensive template. Works out of the box for most [Node.js][nodejs] projects.
+👩🏻‍💻 Reverse Engineering webpack modules from webpackjsonP
 
-🏃🏽 Instant Value: All basic tools included and configured:
+🏽 ⚙ Tools used:
 
 - [TypeScript][typescript] [4.0][typescript-4-0]
 - [ESLint][eslint] with some initial rules recommendation
@@ -37,18 +37,9 @@ To start, just click the **[Use template][repo-template-action]** link (or the g
 To clone the repository use the following commands:
 
 ```sh
-git clone https://github.com/jsynowiec/node-typescript-boilerplate
-cd node-typescript-boilerplate
+git clone https://github.com/SreemanthG/Webpack-module-crack
+cd webpack-module-crack
 npm install
-```
-
-### Download latest release
-
-Download and unzip current `master` branch or one of tags:
-
-```sh
-wget https://github.com/jsynowiec/node-typescript-boilerplate/archive/master.zip -O node-typescript-boilerplate.zip
-unzip node-typescript-boilerplate.zip && rm node-typescript-boilerplate.zip
 ```
 
 ## Available Scripts
@@ -60,27 +51,13 @@ unzip node-typescript-boilerplate.zip && rm node-typescript-boilerplate.zip
 - `test` - run tests,
 - `test:watch` - interactive watch mode to automatically re-run tests
 
-## Additional Informations
-
-### Why include Volta
-
-[Volta][volta]’s toolchain always keeps track of where you are, it makes sure the tools you use always respect the settings of the project you’re working on. This means you don’t have to worry about changing the state of your installed software when switching between projects. For example, it's [used by engineers at LinkedIn][volta-tomdale] to standarize tools and have reproducible development environments.
-
-I recommend to [install][volta-getting-started] Volta and use it to manage your project's toolchain.
-
-### Writing tests in JavaScript
-
-Writing unit tests in TypeScript can sometimes be troublesome and confusing. Especially when mocking dependencies and using spies.
-
-This is **optional**, but if you want to learn how to write JavaScript tests for TypeScript modules, read the [corresponding wiki page][wiki-js-tests].
-
 ## Backers & Sponsors
 
 Support this project by becoming a [sponsor][sponsor].
 
 ## License
 
-Licensed under the APLv2. See the [LICENSE](https://github.com/jsynowiec/node-typescript-boilerplate/blob/master/LICENSE) file for details.
+Licensed under the APLv2. See the [LICENSE](https://github.com/SreemanthG/Webpack-module-crack/blob/master/LICENSE) file for details.
 
 [ts-badge]: https://img.shields.io/badge/TypeScript-4.0-blue.svg
 [nodejs-badge]: https://img.shields.io/badge/Node.js->=%2012.13-blue.svg
