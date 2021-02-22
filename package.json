@@ -32,6 +32,7 @@
   "author": "Jakub Synowiec <github@jakubsynowiec.info>",
   "license": "Apache-2.0",
   "dependencies": {
+    "puppeteer": "^7.1.0",
     "tslib": "~2.0.3"
   },
   "volta": {

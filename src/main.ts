@@ -1,32 +1,27 @@
-/**
- * Some predefined delays (in milliseconds).
- */
-export enum Delays {
-  Short = 500,
-  Medium = 2000,
-  Long = 5000,
-}
+import * as puppeteer from 'puppeteer';
+import Inject from './inject'
+// const web = new Inject()
+// console.log(web.getAllStates);
 
-/**
- * Returns a Promise<string> that resolves after given time.
- *
- * @param {string} name - A name.
- * @param {number=} [delay=Delays.Medium] - Number of milliseconds to delay resolution of the Promise.
- * @returns {Promise<string>}
- */
-function delayedHello(
-  name: string,
-  delay: number = Delays.Medium,
-): Promise<string> {
-  return new Promise((resolve: (value?: string) => void) =>
-    setTimeout(() => resolve(`Hello, ${name}`), delay),
-  );
-}
 
-// Below are examples of using ESLint errors suppression
-// Here it is suppressing missing return type definitions for greeter function
+(async () => {
+  const browser = await puppeteer.launch({ headless: false });
+  const page = await browser.newPage();
+  await page.goto('https://web.whatsapp.com/');
+  // Get the "viewport" of the page, as reported by the page.
+  // const dimensions = await page.evaluate(exportInject);
+  await page.waitForTimeout(10000)
+  // await page.addScriptTag({ path: './build/src/inject.js' });
+  // await page.exposeFunction("inject",()=>{
+  //   return Inject;
+  // })
+  const dimensions = await page.evaluate((temp)=>{
+    // const webObj = new window.inject();
+    eval('var inject = new '+ temp);
+    window.inject = inject;
+  },Inject.toString());
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export async function greeter(name: string) {
-  return await delayedHello(name, Delays.Long);
-}
+  console.log('Dimensions:', dimensions);
+
+  // await browser.close();
+})();
